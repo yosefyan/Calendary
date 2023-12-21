@@ -29,5 +29,4 @@ Calendary is not just an ordinary calendar; it comes with a touch of legend! Exp
 ## Technologies Used
 
 - HTML
-- CSS
 - JavaScript
