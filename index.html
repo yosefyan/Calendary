@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendary</title>
+    <script src="./js/index.js" type="module" defer></script>
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <style>
+      .tShadow {
+        text-shadow: 0 0 1rem black;
+      }
+      .diss {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+      }
+      .items:nth-child(even) {
+        background-color: rgba(8, 128, 165, 0.24);
+      }
+      .items:nth-child(odd) {
+        background-color: #0c20454b;
+      }
+    </style>
+  </head>
+  <body
+    class="overflow-x-hidden xl:overflow-x-hidden bg-[url('./assets/calendarBG.jpg')] bg-[length:100%_100%] font-['Rubik_Bubbles']">
+    <div
+      class="container w-[100vw] h-[100vh] flex justify-center items-center m-auto">
+      <div
+        class="dialog diss absolute w-[90%] h-[90%] xl:w-[65vw] xl:h-[80vh] bg-blue-500 rounded-lg shadow-lg m-auto">
+        <i
+          id="close"
+          class="absolute text-4xl transition-all text-red-900 hover:text-red-700 right-0 m-8 cursor-pointer"
+          >X</i
+        >
+        <h2
+          class="text-5xl text-center text-blue-200 w-[80%] h-[20%] m-auto flex justify-center items-center">
+          Add an event
+        </h2>
+        <form id="addingForm" class="flex justify-center items-center">
+          <fieldset
+            class="w-[80%] h-[15vh] my-4 border-t-4 rounded-lg border-cyan-400/50 p-2">
+            <legend class="text-white text-2xl">Description</legend>
+            <div class="flex gap-3">
+              <input
+                id="desc"
+                class="text-3xl text-cyan-200 w-full rounded-lg shadow-lg h-full p-6 bg-blue-800/75"
+                type="text" />
+              <input
+                value="ADD"
+                type="submit"
+                class="bg-green-800 transition-all rounded-lg cursor-pointer text-2xl text-white shadow-lg w-[20%] hover:scale-95" />
+            </div>
+          </fieldset>
+        </form>
+        <div class="events">
+          <h2
+            id="fullDesc"
+            class="text-4xl text-blue-200 w-[80%] h-[20%] border-b-8 border-b-cyan-800 m-auto flex justify-center items-center p-4">
+            Full data
+          </h2>
+          <div class="flex justify-center items-center w-full h-[40vh]">
+            <div
+              id="events"
+              class="w-[80%] overflow-y-auto h-[80%] bg-cyan-200/25 rounded-lg shadow-cyan-200 m-auto"></div>
+          </div>
+        </div>
+      </div>
+      <div id="calendar" class="shadow-lg shadow-cyan-200/50 relative w-[80%] h-[80%]">
+        <div
+          id="arrowsContainer"
+          class="rounded-lg text-cyan-500 w-full h-[20%] flex justify-evenly bg-blue-500/50">
+          <i
+            class="fa-solid flex justify-center items-center fa-chevron-left w-[20%] text-5xl hover:bg-pink-500/25 transition-all cursor-pointer"></i>
+          <h2
+            id="currentMonth"
+            class="w-[full] flex text-center justify-center items-center text-5xl trackking-widest text-white"></h2>
+          <i
+            class="fa-solid fa-chevron-right w-[20%] flex justify-center items-center text-5xl hover:bg-pink-500/25 transition-all cursor-pointer"></i>
+        </div>
+        <div class="bottomPart h-[80%] border-2">
+          <div
+            id="daysContainer"
+            class="list-none flex bg-blue-500/25 h-[10%]"></div>
+          <div
+            id="monthNumbers"
+            class="grid grid-cols-7 bg-gradient-to-r from-indigo-500 via-purple-500/50 to-blue-500/50 h-[90%] list-none text-white"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
