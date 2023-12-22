@@ -16,7 +16,7 @@ Calendary is not just an ordinary calendar; it comes with a touch of legend! Exp
 
 ## How to Use
 
-1. Access the Calendary app on GitHub Pages: [Open Calendary](https://yosefyan.github.io/calendary).
+1. Access the Calendary app on GitHub Pages: [Open Calendary](https://yosefyan.github.io/Calendary).
 
 2. Explore the calendar, navigate through months, and interact with the legendary touch.
 
